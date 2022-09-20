@@ -8,4 +8,5 @@ export const theme = {
     primary600: '#9CB0A4',
     primary700: '#699B7F',
   },
+  fonts: {},
 };
