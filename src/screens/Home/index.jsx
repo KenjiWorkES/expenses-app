@@ -1,8 +1,27 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Image, Text, Pressable } from 'react-native';
+import { theme } from '../../themes';
 
 import { styles } from './styles';
 
 export function Home() {
-  return <View style={styles.container}></View>;
+  return (
+    <View style={styles.container}>
+      <View style={styles.imageContainer}>
+        <Image
+          style={styles.image}
+          source={require('../../../assets/images/E-commerce.png')}
+        />
+      </View>
+
+      <Text style={styles.title}>Helps you to track your expenses.</Text>
+
+      <Pressable
+        style={styles.button}
+        android_ripple={{ color: theme.colors.primary700 }}
+      >
+        <Text style={styles.buttonText}>Let’s Start!</Text>
+      </Pressable>
+    </View>
+  );
 }

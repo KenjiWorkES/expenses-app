@@ -8,5 +8,12 @@ export const theme = {
     primary600: '#9CB0A4',
     primary700: '#699B7F',
   },
-  fonts: {},
+  fonts: {
+    'extra-light': 'ReadexPro_200ExtraLight',
+    light: 'ReadexPro_300Light',
+    regular: 'ReadexPro_400Regular',
+    medium: 'ReadexPro_500Medium',
+    'semi-bold': 'ReadexPro_600SemiBold',
+    bold: 'ReadexPro_700Bold',
+  },
 };
