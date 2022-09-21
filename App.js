@@ -11,6 +11,7 @@ import {
 import AppLoading from 'expo-app-loading';
 import { useState } from 'react';
 import { StartScreen } from './src/screens/StartScreen';
+import { AddScreen } from './src/screens/AddScreen';
 import { SafeAreaView, StyleSheet } from 'react-native';
 
 export default function App() {
@@ -24,6 +25,8 @@ export default function App() {
   });
 
   const [start, setStart] = useState(false);
+  const [add, setAdd] = useState(false);
+  const [expenses, setExpenses] = useState([]);
 
   if (!fonts) {
     return <AppLoading />;
@@ -33,10 +36,25 @@ export default function App() {
     setStart(true);
   };
 
+  const changeToAddScreenHandler = () => {
+    setAdd(true);
+  };
+
+  const addExpense = (expense) => {
+    setExpenses((prevExpenses) => [...prevExpenses, expense]);
+    setAdd(false);
+  };
+
   let screen = <Home onStart={changeToStartScreenHandler} />;
 
   if (start) {
-    screen = <StartScreen />;
+    screen = (
+      <StartScreen onAdd={changeToAddScreenHandler} expenses={expenses} />
+    );
+  }
+
+  if (add) {
+    screen = <AddScreen onAddExpense={addExpense} />;
   }
 
   return <SafeAreaView style={styles.rootContainer}>{screen}</SafeAreaView>;

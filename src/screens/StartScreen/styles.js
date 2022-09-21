@@ -70,7 +70,9 @@ export const styles = StyleSheet.create({
     color: theme.colors.dark,
   },
   list: {
-    maxWidth: 200,
+    maxHeight: 200,
+    width: '100%',
+    minHeight: 200,
   },
   button: {
     width: 50,
