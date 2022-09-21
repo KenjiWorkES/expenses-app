@@ -16,10 +16,6 @@ Tabela de conteúdos
 <!--ts-->
    * [Sobre o projeto](#-sobre-o-projeto)
    * [Funcionalidades](#funcionalidades)
-   * [Layout](#-layout)
-     * [Desktop](#desktop)
-     * [Tablet](#tablet)
-     * [Mobile](#mobile)
    * [Como executar o projeto](#-como-executar-o-projeto)
      * [Pré-requisitos](#pré-requisitos)
      * [Projeto (Frontend)](#projeto)
