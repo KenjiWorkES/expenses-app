@@ -4,7 +4,7 @@ import { theme } from '../../themes';
 
 import { styles } from './styles';
 
-export function Home() {
+export function Home({ onStart }) {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -17,6 +17,7 @@ export function Home() {
       <Text style={styles.title}>Helps you to track your expenses.</Text>
 
       <Pressable
+        onPress={onStart}
         style={styles.button}
         android_ripple={{ color: theme.colors.primary700 }}
       >
