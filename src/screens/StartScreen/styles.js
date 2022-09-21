@@ -4,10 +4,11 @@ import { theme } from '../../themes';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 32,
+    justifyContent: 'space-between',
   },
   header: {
     marginTop: 40,
+    paddingHorizontal: 32,
   },
   title: {
     fontSize: 32,
@@ -26,6 +27,7 @@ export const styles = StyleSheet.create({
     color: theme.colors.dark,
   },
   resume: {
+    paddingHorizontal: 32,
     marginTop: 32,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -50,5 +52,32 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.medium,
     fontSize: 24,
     color: theme.colors.primary500,
+  },
+  body: {
+    paddingVertical: 16,
+    paddingHorizontal: 32,
+    marginTop: 32,
+    backgroundColor: theme.colors.primary300,
+    alignItems: 'center',
+  },
+  titleContainer: {
+    width: '100%',
+    textAlign: 'left',
+  },
+  bodyTitle: {
+    fontSize: 16,
+    fontFamily: theme.fonts.medium,
+    color: theme.colors.dark,
+  },
+  list: {
+    maxWidth: 200,
+  },
+  button: {
+    width: 50,
+    height: 50,
+    backgroundColor: theme.colors.primary500,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
