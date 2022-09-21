@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
+
+import { ExpensesCard } from '../../components/ExpensesCard';
 
 import { styles } from './styles';
 import { theme } from '../../themes';
@@ -14,28 +16,13 @@ export function StartScreen() {
         <Text style={styles.balance}>$12453,12</Text>
       </View>
       <View style={styles.resume}>
-        <View style={styles.card}>
-          <Ionicons
-            name="arrow-up-circle-sharp"
-            size={32}
-            color={theme.colors.primary500}
-          />
-          <View style={styles.cardContent}>
-            <Text style={styles.cardHeader}>In</Text>
-            <Text style={styles.cardBody}>Value</Text>
-          </View>
-        </View>
-        <View style={styles.card}>
-          <Ionicons
-            name="arrow-down-circle-sharp"
-            size={32}
-            color={theme.colors.primary500}
-          />
-          <View style={styles.cardContent}>
-            <Text style={styles.cardHeader}>Out</Text>
-            <Text style={styles.cardBody}>Value</Text>
-          </View>
-        </View>
+        <ExpensesCard label="In" />
+        <ExpensesCard label="Out" isOut={true} />
+      </View>
+
+      <View>
+        <Text>Activity</Text>
+        <FlatList />
       </View>
     </View>
   );

@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
   },
   balance: {
     marginTop: 8,
-    fontSize: theme.fonts.medium,
+    fontSize: theme.fonts.bold,
     fontSize: 40,
     color: theme.colors.dark,
   },
